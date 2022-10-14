@@ -4,16 +4,26 @@ body {
     font-family: 'Roboto', sans-serif;
     padding: 10%;
     font-size: 2rem;
-    color: purple;
 }
 
-/* input, button {
-    font: inherit;
-    color: inherit;
-} */
-
 p {
-    text-indent: 2em;
     letter-spacing: 0.04em;
 }
 
+a {
+    cursor: pointer;
+    color: hsl(207, 44%, 49%);
+
+}
+
+a:visited {
+    color:  purple;
+} 
+
+a:hover, a:focus{
+    color:  hsl(187, 44%, 49%, 0.8);
+}
+
+a:active {
+    color: red;
+}
