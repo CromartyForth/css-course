@@ -48,5 +48,5 @@ body {
 
 .box:nth-child(2) {
     flex: 2 2 100px;
-    order: -1;
+    /* order: -1; */
 }
