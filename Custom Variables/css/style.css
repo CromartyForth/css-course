@@ -20,12 +20,25 @@
     --BORDER: 2px solid var(--DARK-COLOR);
 
 /* || COLOURS */
-
     --BGCOLOR: #475569;
     --ALT-BGCOLOR: #1E293B;
     --RADIAL-COLOR: whitesmoke;
     --LIGHT-COLOR: whitesmoke;
     --DARK-COLOR: #000;
+
+/* || SQUARE */
+    --SQUARE--BGCOLOR: papayawhip;
+    --SQUARE--SIZE: max(20vw, 150px);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BGCOLOR: #000;
+    --ALF-BGCOLOR: #333;
+    --RADIAL-COLOR: rgb(217,217,217);
+    --SQUARE--BGCOLOR: rgb(179, 139, 179);
+  }
 }
 
 /* || GENERAL STYLES */
@@ -41,7 +54,6 @@ body {
 
 header,
 nav,
-main,
 footer {
   display: grid;
   place-content: center;
@@ -70,8 +82,34 @@ nav {
 
 main {
   flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: wrap;
+  gap: min(4vw, 15px);
+  padding: min(4vw, 15px);
 }
 
 footer {
   bottom: 0;
 }
+
+/* || FEATURES */
+
+.square--highlight {
+--SQUARE--BGCOLOR: cornflowerblue;
+/* background-color: cornflowerblue; */
+}
+
+.square {
+  background-color: var(--SQUARE--BGCOLOR);
+  width: var(--SQUARE--SIZE);
+  height: var(--SQUARE--SIZE);
+  border: var(--BORDER);
+  border-radius: 15px;
+  display: grid;
+  place-content: center;
+  font-size: var(--FS-XL);
+  box-shadow: var(--SHADOW);
+}
+
