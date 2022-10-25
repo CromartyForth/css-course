@@ -11,11 +11,12 @@
 :root {
 /*  || FONTS */
     --FF: "Numito", sans-serif;
-    --FS: 1.5rem;
+    --FS: clamp(1.75rem, 3vh, 2.25rem);
+    --FS-SM: clamp(1.25rem, 2vh, 1.5rem);
     --FS-XL: 3rem;
 
 /* || GENERAL */
-    --PADDING: 0.5rem;
+    --PADDING: 0.5em;
     --SHADOW: 0 3px 10px -5px var(--DARK-COLOR);
     --BORDER: 2px solid var(--DARK-COLOR);
 
@@ -32,7 +33,7 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: lightdave) {
   :root {
     --BGCOLOR: #000;
     --ALF-BGCOLOR: #333;
@@ -82,29 +83,75 @@ nav {
 
 main {
   flex-grow: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: wrap;
+  /* display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+   */
+
   gap: min(4vw, 15px);
-  padding: min(4vw, 15px);
+  padding: min(4vw, 20px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 300px));
+
+}
+
+main section {
+    flex-grow: 3;
+    padding: var(--PADDING);
+}
+
+main aside {
+    flex-grow: 1;
+    background-color: hsla(0, 0%, 20%, 0.8);
+    color: var(--LIGHT-COLOR);
+    font-size: var(--FS-SM);
+    font-style: italic;
+    padding: var(--PADDING);
+}
+
+.content {
+  margin-top: 20px;
+}
+
+.tooltip {
+  border-bottom: 1px dashed orange;
+  position: relative;
+}
+
+.tooltip:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -20px;
+  white-space: nowrap;
+  background-color: var(--DARK-COLOR);
+  padding: var(--PADDING);
+  border-radius: 15px;
 }
 
 footer {
   bottom: 0;
 }
 
+a:any-link {
+  color: firebrick;
+}
+
+a:hover, a:focus { 
+  filter: brightness(150%);
+  filter: hue-rotate(180deg);
+}
+
 /* || FEATURES */
 
 .square--highlight {
---SQUARE--BGCOLOR: cornflowerblue;
+  --SQUARE--BGCOLOR: cornflowerblue;
 /* background-color: cornflowerblue; */
 }
 
 .square {
   background-color: var(--SQUARE--BGCOLOR);
-  width: var(--SQUARE--SIZE);
-  height: var(--SQUARE--SIZE);
+  /* width: var(--SQUARE--SIZE);
+  height: var(--SQUARE--SIZE); */
   border: var(--BORDER);
   border-radius: 15px;
   display: grid;
@@ -113,3 +160,18 @@ footer {
   box-shadow: var(--SHADOW);
 }
 
+@media screen and (min-width: 576px) {
+    main{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width: calc(70% - 5px);
+    }
+
+    main aside {
+        background-color: hsla(0, 0%, 20%, 0.8);
+        width: calc(30% - 5px);
+    }
+}
