@@ -1,19 +1,55 @@
-html {
-    font-size: 22px;
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+one&family=Nunito&display=swap');
+
+/* || Reset */
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
-body {
-    min-height: 100vh;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-    border-left: 1px solid #333;
-    border-right: 1px solid #333;
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-th, td, caption {
-    border: 1px solid #333;
-    font-family: 'Courier New', Courier, monospace;
-    border-collapse: separate;
-    padding: 0.5rem;
+input, 
+button, 
+textarea {
+    font: inherit;
 }
+
+
+/* || VARIABLES*/
+:root {
+    /* FONTS */
+    --FF: "Nunito", sans-seriff;
+    --FF-HEADINGS: "Fugaz One", cursive;
+    --FF: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLOURS */
+    --BGCOLOR: orange;
+    --BGCOLOR-FADE: rgb(225, 220, 160);
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --BODY-BGCOLOR: #FFF;
+    --FONT-COLOR: #000;
+}
+
+
+/* || UTILITY CLASSES */ 
+.offscreen {
+    position: absolute;
+    left: -1000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+ 
+
