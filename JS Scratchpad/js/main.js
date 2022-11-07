@@ -5,6 +5,51 @@ const myFloat = 42.0;
 const myString = "42.341HELLO145";
 const falseNumber = NaN;
 
+/* Fizz Buzz */
+/* let number = 1;
+while(number < 101){
+    let currentNumber = number % 3 === 0 ? 
+        number % 5 === 0 ? "Fizz Buzz"
+        : "Fizz"
+        : number % 5 === 0 ? "Buzz"
+        : number;
+
+    /* let currentNumber = "";
+     console.log(number % 3);
+    if (number % 3 === 0) {
+        currentNumber = "Fizz ";
+    }
+    if (number % 5 === 0) {
+        currentNumber +="Buzz";
+    }
+    else {
+        currentNumber = number;
+    } 
+
+    console.log(currentNumber);
+    number++;
+} */
+
+let fizz = 3;
+let buzz = 5;
+
+for (var i = 1; i < 101; i ++) {
+    let output = "";
+    if (i % fizz === 0) {
+        output += "Fizz"
+    }
+    if (i % buzz === 0) {
+        output += "Buzz"
+    }
+    if (output != "") {
+        console.log(output);
+    }
+    else {
+        console.log(i);
+    }
+}
+
+
 
 /* Ternary Operator */
 /* Condition ? ifTrue : ifFalse */
