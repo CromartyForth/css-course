@@ -5,8 +5,103 @@ const myFloat = 42.0;
 const myString = "42.341HELLO145";
 const falseNumber = NaN;
 
+
+/* Ternary Operator */
+/* Condition ? ifTrue : ifFalse */
+/* let soup = "Chicken Noodle Soup";
+let isCustomerBanned = true;
+let soupAccess = isCustomerBanned 
+    ? "Sorry, no soup for you" 
+    : soup 
+    ? `Yes, we have ${soup} today` 
+    : "Sorry no soup today";
+console.log(soupAccess); */
+
+/* let testScore = 80;
+let myGrade = testScore > 79 ? "A"
+    : testScore > 69 ? "B"
+    : testScore > 59 ? "C"
+    : testScore > 49 ? "D"
+    : "F";
+console.log(`My grade is ${myGrade}.`) */
+
+/* Rock Paper Scissors */
+const rps = ["Rock", "Paper", "Scissors"];
+let playerOne = rps[Math.floor(Math.random() * 3)];
+console.log("Player One: ", playerOne);
+let computer = rps[Math.floor(Math.random() * 3)];
+console.log("Computer: ", computer);
+
+/* Rock Paper Ternary */
+/* Evaluate all the computers winning moves then for all other results player one wins by default */
+let result = playerOne === computer ? "Tied Game"
+    : playerOne === "Rock" && computer === "Paper" ? "Computer Wins"
+    : playerOne === "Paper" && computer === "Scissors" ? "Computer Wins"
+    : playerOne === "Scissors" && computer === "Rock" ? "Computer Wins"
+    : "Player One Wins";
+console.log(result);
+
+/* Rock Paper Switch */
+/* switch (playerOne) {
+    case computer:
+        console.log("Tied Game");
+        break;
+    
+    case "Rock":
+        if (computer === "Paper") {
+            console.log("rComputer Wins");
+        }
+        else {
+            console.log("rPlayer One Wins");
+        }
+        break;
+        
+    
+    case "Paper":
+        if (computer == "Scissors") {
+            console.log("pComputer Wins");
+        }
+        else {
+            console.log("pPlayer One Wins");
+        }
+        break;
+        
+    
+    case "Scissors":
+        if (computer == "Rock"){
+            console.log("sComputer Wins");
+        }
+        else {
+            console.log("sPlayer One Wins");
+        }
+        break;
+} */
+
+
+/* switch (Math.floor(Math.random() * 10)+1) {
+    case 1:
+        console.log("ONE!");
+        break;
+
+    case 10:
+        console.log("TEN!!");
+        break;
+
+    default:
+        console.log("No Match");
+} */
+
+
+/* Random Letter from my name */
+/* const myName = "Brian May"
+const myNameNoSpaces = myName.replace(" ", "");
+const myNameLength = myNameNoSpaces.length;
+const myRandomNumberMap = (Math.floor(Math.random() * myNameLength))
+console.log(myNameNoSpaces.charAt(myRandomNumberMap)); */
+
+
 /*  Math Object */
-console.log(Math.PI);
+/* console.log(Math.PI);
 console.log(Math.trunc(Math.PI));
 console.log(Math.round(Math.PI));
 console.log(Math.ceil(Math.PI));
@@ -16,7 +111,7 @@ console.log(Math.min(5, 2, 0.25, 12));
 console.log(Math.max(5, 2, 0.25, 12));
 console.log(Math.random());
 console.log(Math.random());
-console.log(Math.floor(Math.random() * 10) +1);
+console.log(Math.floor(Math.random() * 10) +1); */
 
 
 
