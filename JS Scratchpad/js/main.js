@@ -5,6 +5,20 @@ const myFloat = 42.0;
 const myString = "42.341HELLO145";
 const falseNumber = NaN;
 
+/* let myBoolean = confirm("Ok === True\nCancel == False");
+console.log(myBoolean); */
+
+let myName = false;
+while (!myName && !myName.length) {
+    myName = prompt("Please enter your name");
+    /* Ooo look the Nullish coalescing operator ?? */
+    myName = myName.trim();
+    console.log(myName ?? "You didn't enter your name.");
+} 
+
+let changeName = confirm("Change your name?");
+changeName ? location.reload() : console.log(myName);
+
 /* Fizz Buzz */
 /* let number = 1;
 while(number < 101){
@@ -30,10 +44,10 @@ while(number < 101){
     number++;
 } */
 
-let fizz = 3;
-let buzz = 5;
-
-for (var i = 1; i < 101; i ++) {
+/* let fizz = 3;
+let buzz = 5; */
+/*  Each test for multiples is only done once */
+/* for (var i = 1; i < 101; i ++) {
     let output = "";
     if (i % fizz === 0) {
         output += "Fizz"
@@ -47,7 +61,7 @@ for (var i = 1; i < 101; i ++) {
     else {
         console.log(i);
     }
-}
+} */
 
 
 
