@@ -5,19 +5,27 @@ const myFloat = 42.0;
 const myString = "42.341HELLO145";
 const falseNumber = NaN;
 
+
+
+
+/* let myName = "Brian May";
+let myNameLength = myName.length;
+for (let i = 0; i < myNameLength; i++) {
+    console.log(myName.charAt(i));
+} */
+
 /* let myBoolean = confirm("Ok === True\nCancel == False");
 console.log(myBoolean); */
 
-let myName = false;
+/* let myName = false;
 while (!myName && !myName.length) {
-    myName = prompt("Please enter your name");
+    myName = prompt("Please enter your name"); */
     /* Ooo look the Nullish coalescing operator ?? */
-    myName = myName.trim();
+/*     myName = myName.trim();
     console.log(myName ?? "You didn't enter your name.");
 } 
-
 let changeName = confirm("Change your name?");
-changeName ? location.reload() : console.log(myName);
+changeName ? location.reload() : console.log(myName); */
 
 /* Fizz Buzz */
 /* let number = 1;
