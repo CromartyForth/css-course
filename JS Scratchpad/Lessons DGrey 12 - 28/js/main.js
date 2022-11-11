@@ -1,4 +1,62 @@
-/* Objects Destructuring */
+/* Classes */
+
+class Pizza {
+    constructor(pizzaType, pizzaSize) {
+        this.type = pizzaType;
+        this.size = pizzaSize;
+        this.crust = "original";
+        this.toppings = [];
+
+    }
+    get pizzaCrust() {
+        return this.crust;
+    }
+    set pizzaCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+    }
+
+    getCrust() {
+        return this.crust;
+    }
+
+    setCrust(pizzaCrust) {
+        this.crust = pizzaCrust;
+    }
+
+    getToppings() {
+        return this.getToppings;
+    }
+    
+    setToppings(topping) {
+        this.toppings.push(topping);
+    }
+
+    bake() {
+        console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+    }
+}
+
+const myPizza = new Pizza("pepperoni", "small");
+myPizza.pizzaCrust = "thin";
+myPizza.bake();
+console.log(myPizza.type);
+console.log(myPizza.crust);
+console.log(Pizza);
+myPizza.setCrust("thin");
+console.log(myPizza.getCrust());
+myPizza.setToppings("sausage");
+myPizza.setToppings("olives");
+console.log(myPizza.toppings);
+
+
+
+
+
+
+
+
+
+/* // Objects Destructuring
  
 const band = {
     bandName: "Led Zeppelin",
@@ -24,17 +82,17 @@ for (let job in band.members) {
 console.log(band.hasOwnProperty("keyboard"));
 console.log(band.play());
 
-/* Destructuring Objects with my own name*/
+// Destructuring Objects with my own name
 const { play: singToMe } = band;
 console.log(singToMe(2));
 
-/* Destructuring Objects with object keys*/
+// Destructuring Objects with object keys
 const { play } = band;
 console.log(play(3));
 
-/* Destructuring Objects passed into functions */
+// Destructuring Objects passed into functions
 function sings({ members }) { return `${members.vocals} sings`};
-console.log(sings(band));
+console.log(sings(band)); */
 
 
 
