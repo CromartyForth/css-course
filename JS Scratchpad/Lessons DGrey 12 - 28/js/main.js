@@ -1,20 +1,12 @@
 /* Classes */
 
 class Pizza {
-    constructor(pizzaType, pizzaSize) {
-        this.type = pizzaType;
+    constructor(pizzaSize) {
+       
         this.size = pizzaSize;
         this.crust = "original";
-        this.toppings = [];
-
     }
-    get pizzaCrust() {
-        return this.crust;
-    }
-    set pizzaCrust(pizzaCrust) {
-        this.crust = pizzaCrust;
-    }
-
+  
     getCrust() {
         return this.crust;
     }
@@ -22,37 +14,21 @@ class Pizza {
     setCrust(pizzaCrust) {
         this.crust = pizzaCrust;
     }
+}
 
-    getToppings() {
-        return this.getToppings;
-    }
-    
-    setToppings(topping) {
-        this.toppings.push(topping);
+class SpecialityPizza extends Pizza {
+    constructor(pizzaSize){
+        super(pizzaSize);
+        this.type = `"The Works"`;
     }
 
-    bake() {
-        console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+    slice() {
+        console.log(`Our ${this.type} ${this.size} pizza has 8 slices`);
     }
 }
 
-const myPizza = new Pizza("pepperoni", "small");
-myPizza.pizzaCrust = "thin";
-myPizza.bake();
-console.log(myPizza.type);
-console.log(myPizza.crust);
-console.log(Pizza);
-myPizza.setCrust("thin");
-console.log(myPizza.getCrust());
-myPizza.setToppings("sausage");
-myPizza.setToppings("olives");
-console.log(myPizza.toppings);
-
-
-
-
-
-
+const mySpecialty = new SpecialityPizza("medium");
+mySpecialty.slice();
 
 
 
