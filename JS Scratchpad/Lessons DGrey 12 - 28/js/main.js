@@ -1,5 +1,5 @@
 // Factory Functions
-function pizzaFactory(pizzaSize) {
+/* function pizzaFactory(pizzaSize) {
     const crust = "original";
     const size = pizzaSize;
 
@@ -9,25 +9,37 @@ function pizzaFactory(pizzaSize) {
 }
 
 const myPizza = pizzaFactory("small");
-myPizza.bake();
+myPizza.bake(); */
 
 /* Classes */
 
-/* class Pizza {
+class Pizza {
+    #crust = "original";
+    #sauce = "traditional tomato";
+    #size;
     constructor(pizzaSize) {
        // _underscore indicates private variables
-        this._size = pizzaSize;
-        this._crust = "original";
+        this.#size = pizzaSize;
     }
   
     getCrust() {
-        return this.crust;
+        return this.#crust;
     }
 
     setCrust(pizzaCrust) {
-        this._crust = pizzaCrust;
+        this.#crust = pizzaCrust;
     }
-} */
+
+    hereYouGo() {
+        console.log(`Here is your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza`);
+    }
+}
+
+const myPizza = new Pizza("large");
+myPizza.hereYouGo();
+myPizza.setCrust("stuffed")
+console.log(myPizza.getCrust());
+
 
 
 /* class SpecialityPizza extends Pizza {
