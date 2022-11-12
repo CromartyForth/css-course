@@ -1,3 +1,30 @@
+// JSON
+
+/* const myObj = {
+    name: "Dave",
+    hobbies: ["eat", "sleep", "code"],
+    hello: function () {
+        console.log("Hello");
+    }
+}
+
+console.log(myObj);
+console.log(myObj.name);
+myObj.hello();
+console.log(typeof myObj);
+
+const sendJSON = JSON.stringify(myObj);
+console.log(sendJSON);
+console.log(typeof sendJSON);
+
+const receiveJson = JSON.parse(sendJSON);
+console.log(receiveJson);
+console.log(receiveJson.name) */
+
+
+
+
+
 // Factory Functions
 /* function pizzaFactory(pizzaSize) {
     const crust = "original";
@@ -13,7 +40,7 @@ myPizza.bake(); */
 
 /* Classes */
 
-class Pizza {
+/* class Pizza {
     #crust = "original";
     #sauce = "traditional tomato";
     #size;
@@ -38,7 +65,7 @@ class Pizza {
 const myPizza = new Pizza("large");
 myPizza.hereYouGo();
 myPizza.setCrust("stuffed")
-console.log(myPizza.getCrust());
+console.log(myPizza.getCrust()); */
 
 
 
