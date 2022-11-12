@@ -1,3 +1,26 @@
+// JS Errors and Error Handling
+"use strict";
+const makeError = (reps) => {
+    let i = 1;
+    while (i <= reps){
+        try {
+            if (i % 2 !== 0) {
+                throw new Error("Odd number!")
+            }
+            console.log("Even number");
+        } catch(error) {
+            console.error(error.stack);
+        } finally {
+            console.log("...finally");
+            i++;
+        }
+    }
+};
+makeError(5);
+
+
+
+
 // JSON
 
 /* const myObj = {
